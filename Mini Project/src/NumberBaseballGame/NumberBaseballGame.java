@@ -28,9 +28,11 @@ public class NumberBaseballGame {
 
 		int strike = 0;
 		int ball = 0;
+		int gamecnt = 0;
 
 		while (true) {
 			System.out.print("숫자 3개를 입력하세요 : ");
+			gamecnt++;
 			int num1 = sc.nextInt();
 			int num2 = sc.nextInt();
 			int num3 = sc.nextInt();
@@ -55,7 +57,7 @@ public class NumberBaseballGame {
 			}
 
 			if (strike == 3) {
-				System.out.println("정답");
+				System.out.println("정답 " + gamecnt + "회 만에 맞추셨습니다.");
 				sc.close();
 				break;
 			} else if (strike == 0 && ball == 0) {
